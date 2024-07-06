@@ -4,4 +4,21 @@
   overscroll-behavior-y: none;
   display: flex;
   position: relative;
+  padding: 0;
+}
+.Btn {
+  display: none;
+}
+
+@media screen and (max-width: 620px) {
+  .Btn {
+    display: block;
+    position: absolute;
+    z-index: 999999;
+    background-color: var(--color-brand--2);
+    margin: 0.2rem;
+  }
+  .app {
+    justify-content: center;
+  }
 }

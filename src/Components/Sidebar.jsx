@@ -4,10 +4,14 @@ import Logo from "./Logo";
 import styles from "./Sidebar.module.css";
 import Footer from "./Footer";
 import { polyfillCountryFlagEmojis } from "country-flag-emoji-polyfill";
-function Sidebar() {
+function Sidebar({ isSideBarOpen }) {
   polyfillCountryFlagEmojis();
   return (
-    <div className={styles.sidebar}>
+    <div
+      className={`${styles.sidebar} ${
+        isSideBarOpen ? styles.SideBarOpen : styles.SideBarClose
+      }`}
+    >
       <Logo />
       <AppNav />
 

@@ -32,3 +32,36 @@
   color: var(--color-light--1);
   margin-bottom: 2.5rem;
 }
+
+@media screen and (max-width: 900px) {
+  .homepage {
+    padding: 2rem 1rem;
+  }
+  .homepage h1 {
+    font-size: 3.5rem;
+  }
+  .homepage h2 {
+    font-size: 1.2rem;
+  }
+  .cta {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .homepage {
+    height: 100vh;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .homepage h1 {
+    font-size: 2.2rem;
+  }
+  .homepage h2 {
+    font-size: 1rem;
+  }
+  .homepage Link {
+    font-size: 1.1rem !important;
+  }
+}

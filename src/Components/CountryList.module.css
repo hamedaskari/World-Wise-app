@@ -10,3 +10,12 @@
   align-content: start;
   gap: 1.6rem;
 }
+@media screen and (max-width: 780px) {
+  .countryList {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* for sdiebar */
+/* translate(-310px, 10px) */

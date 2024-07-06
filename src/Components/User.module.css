@@ -32,3 +32,11 @@
   text-transform: uppercase;
   cursor: pointer;
 }
+@media screen and (max-width: 780px) {
+  .user {
+    font-size: 1.2rem;
+  }
+  .user button {
+    font-size: 1rem;
+  }
+}

@@ -52,3 +52,13 @@
   background-color: var(--color-brand--1);
   color: var(--color-dark--1);
 }
+
+@media screen and (max-width: 780px) {
+  .name {
+    margin: 0;
+  }
+  .cityItem {
+    flex-direction: column;
+    gap: 0.5rem !important;
+  }
+}

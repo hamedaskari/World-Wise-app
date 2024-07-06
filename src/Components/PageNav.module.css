@@ -32,3 +32,12 @@ a.ctaLink:visited {
   padding: 0.8rem 2rem;
   border-radius: 7px;
 }
+@media screen and (max-width: 768px) {
+  .nav {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: space-between;
+  }
+}
