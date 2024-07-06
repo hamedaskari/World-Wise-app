@@ -20,7 +20,7 @@ function AppLayout() {
       </Button>
       <Sidebar isSideBarOpen={isSideBarOpen} />
       {isAuthenticated ? <User /> : null}
-      <Map />
+      <Map setIsSidBarOpen={setIsSidBarOpen} />
     </div>
   );
 }

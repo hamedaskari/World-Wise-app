@@ -15,7 +15,7 @@ import Button from "./Button";
 import useUrlPosition from "../Hooks/useUrlPosition";
 import fetchCities from "../API/useGetCities";
 
-function Map() {
+function Map({ setIsSidBarOpen }) {
   let { cities } = useCities();
   const [mapLat, mapLng] = useUrlPosition();
   const [mapPosition, setMapPosition] = useState([38.8, -9.1]);
@@ -53,7 +53,7 @@ function Map() {
           );
         })}
         <ChangeCenter position={mapPosition} />
-        <EventMap />
+        <EventMap setIsSidBarOpen={setIsSidBarOpen} />
       </MapContainer>
     </div>
   );
@@ -64,10 +64,11 @@ function ChangeCenter({ position }) {
   map.setView(position);
   return null;
 }
-function EventMap() {
+function EventMap({ setIsSidBarOpen }) {
   const nvigate = useNavigate();
   useMapEvents({
     click: (e) => {
+      setIsSidBarOpen(true);
       nvigate(`form?lat=${+e.latlng.lat}&lng=${+e.latlng.lng}`);
     },
   });
