@@ -1,19 +1,17 @@
-import { useSearchParams, useNavigate } from "react-router-dom";
-import styles from "./Map.module.css";
+import { useEffect, useState } from "react";
 import {
   MapContainer,
-  TileLayer,
   Marker,
   Popup,
+  TileLayer,
   useMap,
   useMapEvents,
 } from "react-leaflet";
-import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useCities } from "../Contexts/CitiesContext";
-import Button from "./Button";
+import styles from "./Map.module.css";
 
 import useUrlPosition from "../Hooks/useUrlPosition";
-import fetchCities from "../API/useGetCities";
 
 function Map({ setIsSidBarOpen }) {
   let { cities } = useCities();

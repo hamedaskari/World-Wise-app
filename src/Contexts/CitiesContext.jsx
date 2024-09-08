@@ -1,12 +1,6 @@
-import {
-  createContext,
-  useContext,
-  useEffect,
-  useReducer,
-  useState,
-} from "react";
-import fetchCities from "../API/useGetCities";
+import { createContext, useContext, useEffect, useReducer } from "react";
 import supabase from "../API/supabase";
+import fetchCities from "../API/useGetCities";
 
 const CitiesProvider = createContext();
 const initialState = {
@@ -71,7 +65,6 @@ function CitiesContext({ children }) {
         .eq("id", id);
 
       if (error) throw new Error(error.message);
-
       dispatch({ type: "showCity", payload: data });
     } catch (err) {
       console.error(err.message);
